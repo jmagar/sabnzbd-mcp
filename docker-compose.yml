@@ -4,6 +4,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: sabnzbd-mcp
+    labels:
+      - com.centurylinklabs.watchtower.enable=false
     ports:
       - "${SABNZBD_MCP_PORT:-9152}:${SABNZBD_MCP_PORT:-9152}"
     env_file:
