@@ -14,8 +14,8 @@ services:
       - sabnzbd-logs:/app/logs
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:6972/health"]
-      interval: 30s
+      test: ["CMD", "curl", "-f", "http://localhost:9152/health"]
+      interval: 30s 
       timeout: 10s
       retries: 3
       start_period: 30s
